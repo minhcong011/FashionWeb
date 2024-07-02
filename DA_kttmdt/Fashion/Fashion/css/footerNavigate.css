@@ -1,0 +1,25 @@
+﻿* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+.memufooter {
+    margin-top: 30px;
+}
+.memufooter ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.memufooter ul li {
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+    .memufooter ul li a {
+        color: #AEAEAE;
+        text-decoration: none;
+    }
+        .memufooter ul li a:hover {
+            color: #FE9716;
+        }

@@ -1,0 +1,192 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Menu.master.cs" Inherits="Fashion.Menu" %>
+
+<%@ Register Src="~/UserControl_ascx/footerNavigate.ascx" TagPrefix="uc1" TagName="footerNavigate" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../css/StyleMenu.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="container">
+            <div id="Header">
+                <div id="topbar">
+                    <div class="contai_top">
+                        <div class="logo">
+                            <a href="#">ALENA</a>
+                        </div>
+                        <div class="inpFind">
+                            <%--tìm kiếm của Ánh Minh--%>
+                            <p>tìm kiếm</p>
+                        </div>
+                    
+                        <div class="account_header">
+                            <%--đăng ký, đăng nhập (thay ascx)--%>
+                            <div class="login">
+                                <a href="#"><img src="../img/icon_user_account.png" width="50px"/></a>
+                                <a href="../Login.aspx">Đăng nhập</a> <span>/</span> <a href="../Register.aspx">Đăng ký</a>
+                            </div>
+
+                            <div class="cart">
+                                <a href="../CartPage.aspx">
+                                    <img src="../img/icon_cart.png" width="60px"/>
+                                    <span class="count_items_card">0</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <nav>
+                    <div class="menu">
+                        <ul class="items-big">
+                            <li><a href="#">Trang chủ</a></li>
+                            <li>
+                                <a href="#">Thời trang nam</a>
+                                <ul class="items-small">
+                                    <li>
+                                        <a href="#">Sơ mi nam</a>
+                                        <ul class="items-small">
+                                            <li><a href="#">Sơ mi ngắn tay</a></li>
+                                            <li><a href="#">Sơ mi dài tay</a></li>  
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Quần âu nam</a></li>
+                                    <li><a href="#">Quần short nam</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../ProductPage.aspx">Sản phẩm</a>
+                                <ul class="items-small">
+                                    <li>
+                                        <a href="../ProductPage.aspx?filter=noiBat">Sản phẩm nổi bật</a>
+                                        <ul class="items-small">
+                                            <li><a href="#>Quần áo</a></li>
+                                            <li><a href="#">Phụ kiện</a></li>
+                                            <li><a href="#">Giày dép</a></li>
+                                            <li><a href="#">Bé gái</a></li>
+                                            <li><a href="#">Bé trai</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="../ProductPage.aspx?filter=hotTrend">Sản phẩm hot trend</a></li>
+                                    <li><a href="../ProductPage.aspx?filter=khuyenMai">Sản phẩm khuyến mãi</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../ProductPage.aspx?type=beTrai">Bé trai</a></li>
+                            <li><a href="../ProductPage.aspx?type=beGai">Bé gái</a></li>
+                            <li><a href="#">Tin tức</a></li>
+                            
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                        
+                    <div class="hotLine">
+                        <div class="main_hl">
+                            <img src="img/icon_telephone.png" />
+                            <p>HotLine:<span> 1900 6750</span></p>
+                        </div>
+                        
+                    </div>
+                </nav>
+
+                <div class="banner">
+                    <img src="img/banner.jpg" width="100%"/>
+                </div>
+            </div>
+
+            <div id="content">
+                <div>
+                    <%--content bỏ vào đây--%>
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+           
+
+
+            <div class="email">
+                <div class="contai_email">
+                    <p>nhập thông tin khuyến mãi từ chúng tôi</p>
+                    <div class="inp_email">
+                        <asp:TextBox ID="mail" runat="server" TextMode="Email" placeholder="Nhập email của bạn"></asp:TextBox>
+                        <asp:LinkButton ID="btn_submit" runat="server">Gửi</asp:LinkButton>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <div class="contai_footer">
+                    <div class="items-big-footer">
+                        <div class="items">     <%--logo-lời dãn--%>
+                            <div class="citation">
+                                <a href="#">alena</a>
+                                <p>Shop thời trang và phụ kiện Alena</p>
+                            </div>
+                        </div>
+                    
+                        <div class="items">   <%--map--%>  
+                            <img src="../img/icon_map.png" width="25px"/>
+                            <p>Tầng 6, Tòa nhà Ladeco, 266 Đội Cấn, Phường Liễu Giai, Quận Ba Đình, TP Hà Nội</p>
+                        </div>
+
+                        <div class="items">   <%--thời gian làm việc--%>
+                            <img src="../img/icon_clock.png" width="25px"/>
+                            <p>Giờ làm việc: Từ 9:00 đến 22:00 các ngày trong tuần từ Thứ 2 đến Chủ nhật</p>
+                        </div>
+
+                        <div class="items">   <%--HotLine footer--%>
+                            <img src="../img/icon_phone.png" width="25px"/>
+                            <div class="HotL_footer">
+                                <p>HotLine</p>
+                                <a href="#">1900 6750</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="items-small-footer">
+                        <div class="isf">
+                            <p>Về chúng tôi</p>
+                            <div>
+                                <uc1:footerNavigate runat="server" ID="footerNavigate1" />
+                            </div>
+                        </div>
+
+                        <div class="isf">
+                            <p>Hỗ trợ khách hàng</p>
+                            <div>
+                                <uc1:footerNavigate runat="server" ID="footerNavigate" />
+                            </div>
+                        </div>
+
+                        <div class="isf">
+                            <div class="contai">
+                                <p>Dịch vụ</p>
+                                <div>
+                                    <uc1:footerNavigate runat="server" ID="footerNavigate2" />
+                                </div>
+                            </div>
+                            <div class="icon">
+                                <div class="items_icon">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+
+                    
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>

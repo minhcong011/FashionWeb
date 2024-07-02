@@ -1,0 +1,316 @@
+﻿* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+#header {
+    display:flex;
+    height: 150px;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    background-color: #FFFAF0;
+}
+
+/*TOP BAR*/
+#topbar {
+    height: 90px;
+    background-color: #1C5B41; /*màu xanh*/
+}
+.contai_top {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+    .contai_top .logo {
+        display: flex;
+        margin-left: 100px;
+    }
+    .contai_top .logo a{
+        color: #ffffff;
+        font-size:30px;
+        text-decoration: none;
+        font-weight:bold;
+    }
+    .contai_top .inpFind{
+        width: 500px;
+        background-color:#ffffff;
+    }
+    .contai_top .inpFind p{
+        text-transform: uppercase;
+        font-weight:bold;
+
+    }
+
+
+    .contai_top .account_header{
+        display:flex;
+        align-items:center;
+        justify-items: center;
+    }
+        .contai_top .account_header .login {
+            display: flex;
+            align-items: center;
+            margin: 30px 20px 30px;
+            color: #ffffff;
+            padding-right: 30px;
+            border-right: 2px solid #ffffff;
+            max-height: 30px;
+        }
+            .contai_top .account_header .login span {
+                font-size: 20px;
+            }
+            .contai_top .account_header .login a {
+                display: block;
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 16px;
+                margin: 0px 5px;
+            }
+                .contai_top .account_header .login a:hover {
+                    color: #FE9716;
+                }
+        .contai_top .account_header .cart {
+            display: block;
+        }
+            .contai_top .account_header .cart a {
+                position: relative;
+            }
+                .contai_top .account_header .cart a span {
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    text-align: center;
+                    line-height: 14px;
+                    position: absolute;
+                    top: -40px;
+                    right: 5px;
+                    background: #fff;
+                    color: #1c5b41;
+                    font-size: 10px;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: bold;
+                    border-radius: 50%;
+                }
+
+/*MENU*/
+menu {
+    display: flex;
+}
+    .menu .items-big {
+        display: flex;
+        list-style: none;
+        margin:0;
+        padding:0;
+    }
+        .menu .items-big li {
+            position: relative;
+            padding: 20px;
+        }
+        .menu .items-big a {
+            display: block;
+            text-decoration: none;
+            color: #1C5B41; /*màu xanh*/
+            padding: 8px 10px;
+            font-size: 16px;
+        }
+            .menu .items-big li:hover > a {
+                color: #FE9716; /*màu cam*/
+            }
+
+    .menu .items-small {
+        position: absolute;
+        display: none; /* Ẩn ul con mặc định */
+        width: 200px;
+        top: 100%; /* Đặt ul con ngay dưới li cha */
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border: 2px solid #E8E9EE;
+    }
+
+        .menu .items-big li:hover > .items-small {  /* dấu > dùng để chỉ tới cấp menu trực tiếp (liền kề 1 cấp)*/
+            display: block; /* Hiển thị ul con khi li cha được hover */
+        }
+    .menu .items-small li {
+        padding: 0;
+    }
+    .menu .items-small a {
+        color: #474747;
+        padding: 10px;
+        border-bottom: 2px solid #E8E9EE; /*màu xám*/
+        font-size: 14px;
+    }
+    .menu .items-small li:hover > a {
+        color: #FE9716;
+        border-bottom: 2px solid #FE9716;
+    }
+    .menu .items-small li:last-child a {    
+        border:none;
+    }
+    .menu .items-small .items-small{    /*menu items-small thứ 2*/
+        margin-left:1px;
+        left:200px;
+        top:1px;
+    }
+
+.hotLine {
+    display: flex;
+    align-items: center;
+   /* margin-left: 100px;*/
+}
+.hotLine .main_hl{
+    height 40px;
+    border-left: 2px solid #1C5B41;
+    display: flex;
+    align-items:center;
+}
+    .hotLine img{
+        
+        height: 22px;
+        width: 22px;
+        margin: 0px 20px 0px 50px ;
+    }
+    .hotLine p {
+        display:flex;
+        color: #1C5B41;
+        font-weight:bold;
+
+    }
+        .hotLine p:hover > span {
+            color: #FE9716;
+            white-space: nowrap; /* Ngăn ngắt dòng văn bản */
+        }
+#container .email{
+    display:flex;
+    height: 100px;
+}
+.email .contai_email {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    background-color: #F69D2E;
+}
+
+    .email .contai_email p {
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .email .contai_email .inp_email {
+        display: flex;
+        margin: 0;
+    }
+
+        .email .contai_email .inp_email #mail {
+            width: 300px;
+            color: #666363;
+            padding: 15px;
+            border: none;
+            border-radius: 10px 0px 0px 10px;
+        }
+        .email .contai_email .inp_email #btn_submit {
+            width: 50px;
+            padding: 15px;
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            background-color: #333333;
+            margin-left: -15px;
+            text-align: center;
+        }
+
+#content{
+    display:block;
+    width:auto;
+}
+
+#footer {
+    display: block;
+    height: auto;
+    background-color: #000000;
+}
+
+    .contai_footer {
+        display: flex;
+        padding: 40px;
+    }
+    .contai_footer .items-big-footer{
+        margin:0px 80px;
+    }
+        .contai_footer .items-big-footer .items {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+            width: 500px;
+        }
+
+        .contai_footer .items-big-footer img {
+            background-color: #FE9716;
+            padding: 10px;
+            max-width: 50px;
+            border-radius: 10px;
+            margin-right: 20px
+        }
+        .contai_footer .items-big-footer p {
+            color: #AEAEAE; /* màu xám chữ footer*/
+            font-size: 16px;
+        }
+
+        .contai_footer .citation{
+            display:flex;
+            color: #ffffff;
+            font-size: 18px;
+            flex-direction:column;
+
+        }
+            .contai_footer .citation a {
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 24px;
+                text-transform: uppercase;
+                color: #ffffff;
+            }
+            .contai_footer .citation p {
+                font-size: 20px;
+                color: #FE9716;
+            }
+
+        .contai_footer .items-big-footer .items .HotL_footer{
+            display:flex;
+            flex-direction:column;
+        }
+
+            .contai_footer .items-big-footer .items .HotL_footer a {
+                text-decoration: none;
+                color: #FE9716;
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+        .contai_footer .items-small-footer{
+            display:flex;
+            width: 800px;
+            justify-content:space-evenly;
+        }
+        .contai_footer .items-small-footer .isf{
+            display:flex;
+            flex-direction:column;
+
+        }
+        .contai_footer .items-small-footer .isf p{
+            color: #ffffff;
+            font-weight:bold;
+            font-size: 20px;
+        }
